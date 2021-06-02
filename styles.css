@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+
+  background: linear-gradient(to right, #868f96, #596164);
+}
+.modal.dispApp {
+  display: block;
+  transition-duration: 1s;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-cont {
+  margin: 1.5em auto;
+  width: 50%;
+  text-align: center;
+  padding: 4em 0;
+  background-color: gray;
+}
+
+.chBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+}
+
+form {
+  background-color: #4a5a74;
+  font-family: "Odibee Sans", monospace;
+  width: 70%;
+  color: wheat;
+  padding: 2em 0;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  border-radius: 0.4em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.submit {
+  font-family: "Odibee Sans", monospace;
+  font-size: 1.2rem;
+  background: transparent;
+  padding: 0.4em;
+  color: wheat;
+  border-radius: 0.4em;
+  border: 0.2em solid rgba(0, 0, 0, 0.24);
+}
+.submit:hover {
+  border: 0.2em solid wheat;
+}
+
+.close {
+  margin-top: 0.8em;
+  background: transparent;
+  font-size: 1.3rem;
+  padding: 0.4em;
+  border-radius: 0.4em;
+  border: 0.2em solid rgba(0, 0, 0, 0.24);
+  font-family: "Odibee Sans", monospace;
+  color: wheat;
+}
+.close:hover {
+  border: 0.2em solid wheat;
+}
+input {
+  border-radius: 0.3em;
+  height: 1.4em;
+  margin: 0.5em 0;
+  font-size: 1.2rem;
+}
+
+nav {
+  background-color: #4a5a74;
+  padding: 1.4em 0;
+  width: 100%;
+}
+h2 {
+  color: wheat;
+  font-family: "Odibee Sans", monospace;
+  font-size: 2.5rem;
+}
+.navBtn {
+  font-family: "Odibee Sans", monospace;
+  background-color: transparent;
+  font-size: 1.6rem;
+  padding: 0.2em;
+  border-radius: 0.3em;
+  color: wheat;
+  border: 0.5px solid rgba(0, 0, 0, 0.4);
+}
+.navBtn:hover {
+  border: 0.5px solid wheat;
+}
+.nav-contents {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container {
+  margin: 0 auto;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 20em);
+  justify-content: space-around;
+  align-content: center;
+  width: 90%;
+  gap: 1em;
+  padding-top: 1em;
+  margin: 0 auto;
+}
+.items {
+  height: 15em;
+  width: 20em;
+  background: #3a626f;
+  text-align: center;
+  font-family: "Odibee Sans", monospace;
+  color: wheat;
+  border-radius: 0.3em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.itm {
+  margin: 0.5em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .modal-cont {
+    margin: 7em auto;
+    width: 60%;
+    padding: 2em 0;
+  }
+  form {
+    width: 80%;
+    padding: 1em 0;
+    margin: 0 auto;
+    font-size: 1.3rem;
+  }
+  input {
+    border-radius: 0.3em;
+    height: 1em;
+    margin: 0.5em 0;
+    font-size: 0.8rem;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 16em);
+    justify-content: space-around;
+    align-content: center;
+    width: 90%;
+    gap: 1em;
+    padding-top: 1em;
+    margin: 0 auto;
+  }
+  .items {
+    height: 15em;
+    width: 16em;
+    text-align: center;
+    font-family: "Odibee Sans", monospace;
+  }
+
+  h2 {
+    color: wheat;
+    font-family: "Odibee Sans", monospace;
+    font-size: 2rem;
+  }
+  .nav-contents {
+    justify-content: space-between;
+    width: 80%;
+  }
+}
