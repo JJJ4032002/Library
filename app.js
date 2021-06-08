@@ -12,6 +12,15 @@ let remBtn;
        const title = myForm.elements[0].value;
        const author = myForm.elements[1].value
        const pages = myForm.elements[2].value
+
+       if(title == "" || author == "" || pages == ""){
+           alert("Please enter all the values");
+           
+       }
+       else if(isNaN(pages)){
+           alert("Enter only numbers in No of pages")
+       }
+       else{
   console.log(title);
   console.log(author);
   console.log(pages);
@@ -20,6 +29,8 @@ let remBtn;
   books.prototype.checkRead = function(){
         btn = document.createElement("button");
         remBtn = document.createElement("button");
+        btn.classList.add("btnStyle")
+        remBtn.classList.add("btnStyle")
        remBtn.textContent = "Remove"
       if(myForm.elements[3].checked){
           btn.textContent = "Read"
@@ -50,7 +61,10 @@ let remBtn;
     remBtn.addEventListener("click",function(e){
         console.log(e.target.parentNode.remove());
     })
+
+}
    })
+
      
  closeB.addEventListener("click",function(e){
       modal.classList.remove("dispApp")
